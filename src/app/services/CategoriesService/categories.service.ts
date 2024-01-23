@@ -1,11 +1,13 @@
 import { Injectable } from '@angular/core';
 import { CategoriesServiceApiService } from '../ApiService/CategoryApiService/api.service';
 import { Category } from 'src/app/models/Category';
+import { BehaviorSubject, Subject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CategoriesService {
+  private AllCategoriesSubject$:Subject<Category> = new Subject<Category>();
 
   constructor(private catApi: CategoriesServiceApiService) { }
 
