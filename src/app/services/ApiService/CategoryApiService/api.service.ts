@@ -14,4 +14,10 @@ export class CategoriesServiceApiService {
   getAllCategories():Observable<Category[]>{
     return this.http.get<Category[]>(environment.host+"/api/categories")
   }
+  saveCategory(newCategory: Category): Observable<Category>{
+    return this.http.post<Category>(environment.host+"/api/categories", newCategory)
+  }
+  deleteCategory(id:number){
+    return this.http.delete(environment.host+"/api/category?id="+id)
+  }
 }
