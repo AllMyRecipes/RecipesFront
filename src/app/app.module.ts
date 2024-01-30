@@ -7,11 +7,15 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MainComponent } from './components/main/main.component';
 import { MenubarModule } from 'primeng/menubar';
+import { TagsComponent } from './components/tags/tags.component';
+import { CardsComponent } from './components/cards/cards.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MainComponent
+    MainComponent,
+    TagsComponent,
+    CardsComponent
   ],
   imports: [
     BrowserModule,

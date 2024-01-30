@@ -14,15 +14,16 @@ export class MainComponent implements OnInit {
  categories: Category[]= []
   constructor(private categoriesService: CategoriesService){}
   ngOnInit(): void {
-    this.categories = this.categoriesService.getAllCategories()
-
-    this.items =[
-      {
-        label: "test",
-        items:
+    this.categoriesService.allCategorie$.subscribe({
+      next:(data)=> {
+        console.log(data)
+        this.categories = data
       },
+      error:(error)=> console.log(error)
+    })
+     const newCat = new Category("test")
+     this.categoriesService.newCategory(newCat)
 
-    ]
   }
 
 }
