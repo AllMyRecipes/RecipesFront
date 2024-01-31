@@ -2,11 +2,15 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-
 import { AppRoutingModule } from './app-routing.module';
+
+/*PrimeNG Modules*/
+import { TagModule } from 'primeng/tag';
+import { MenubarModule } from 'primeng/menubar';
+import { InputTextModule } from 'primeng/inputtext';
+
 import { AppComponent } from './app.component';
 import { MainComponent } from './components/main/main.component';
-import { MenubarModule } from 'primeng/menubar';
 import { TagsComponent } from './components/tags/tags.component';
 import { CardsComponent } from './components/cards/cards.component';
 
@@ -23,7 +27,9 @@ import { CardsComponent } from './components/cards/cards.component';
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
-    MenubarModule
+    MenubarModule,
+    TagModule,
+    InputTextModule
   ],
   providers: [],
   bootstrap: [AppComponent]

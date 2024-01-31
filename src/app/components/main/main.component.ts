@@ -9,11 +9,12 @@ import { CategoriesService } from 'src/app/services/CategoriesService/categories
   styleUrls: ['./main.component.css']
 })
 export class MainComponent implements OnInit {
-
- items!: MenuItem
- categories: Category[]= []
+  value: string | undefined;
+  items!: MenuItem
+  categories: Category[]= []
   constructor(private categoriesService: CategoriesService){}
   ngOnInit(): void {
+    this.categoriesService.getAllCategories();
     this.categoriesService.allCategorie$.subscribe({
       next:(data)=> {
         console.log(data)
@@ -21,9 +22,6 @@ export class MainComponent implements OnInit {
       },
       error:(error)=> console.log(error)
     })
-     const newCat = new Category("test")
-     this.categoriesService.newCategory(newCat)
-
   }
 
 }
