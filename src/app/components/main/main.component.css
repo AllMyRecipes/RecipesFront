@@ -1,14 +1,15 @@
-.section_categories{
-  background-color: blue;
+.main{
   position: fixed;
   padding-top: 1%;
   top: 0;
   width: 100%;
-
+  display: flex;
+  border-bottom: black solid 2px;
+}
+.section_categories{
+  width: 100%;
 }
 .section_categories_list{
-  background-color: red;
-  width: 100%;
   display: flex;
   justify-content: space-around;
 }

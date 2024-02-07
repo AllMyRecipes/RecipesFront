@@ -1,0 +1,9 @@
+a {
+  text-decoration: none;
+  color: black;
+}
+a > h1 {
+  font-size: 1.5rem;
+  font-weight: 300;
+  border: solid black 1px;
+}

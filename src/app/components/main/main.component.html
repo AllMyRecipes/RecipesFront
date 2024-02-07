@@ -1,14 +1,13 @@
 <div class="main">
   <div class="section_categories" *ngIf="categories">
-    <span class="p-input-icon-left">
-      <i class="pi pi-search"></i>
-      <input type="text" pInputText [(ngModel)]="value" />
-    </span>
     <ul class="section_categories_list">
       <app-tags *ngFor="let category of categories"
       [category]="category"
       />
     </ul>
+  </div>
+  <div class="section_admin">
+    <app-navbar />
   </div>
 </div>
 

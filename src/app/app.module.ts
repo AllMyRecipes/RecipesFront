@@ -13,13 +13,17 @@ import { AppComponent } from './app.component';
 import { MainComponent } from './components/main/main.component';
 import { TagsComponent } from './components/tags/tags.component';
 import { CardsComponent } from './components/cards/cards.component';
+import { AdminCategoryComponent } from './components/admin.category/admin.category.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MainComponent,
     TagsComponent,
-    CardsComponent
+    CardsComponent,
+    AdminCategoryComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
