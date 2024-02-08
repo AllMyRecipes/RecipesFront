@@ -8,6 +8,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { TagModule } from 'primeng/tag';
 import { MenubarModule } from 'primeng/menubar';
 import { InputTextModule } from 'primeng/inputtext';
+import { TableModule } from 'primeng/table';
 
 import { AppComponent } from './app.component';
 import { MainComponent } from './components/main/main.component';
@@ -33,7 +34,8 @@ import { NavbarComponent } from './components/navbar/navbar.component';
     ReactiveFormsModule,
     MenubarModule,
     TagModule,
-    InputTextModule
+    InputTextModule,
+    TableModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -5,5 +5,29 @@ a {
 a > h1 {
   font-size: 1.5rem;
   font-weight: 300;
-  border: solid black 1px;
+  text-align: center;
+}
+.navBar{
+  width: 100%;
+  display: flex;
+  border-bottom: black solid 2px;
+}
+.section_home{
+  width: 10%;
+  border-right: 2px solid black;
+  border-left: 2px solid black;
+  border-bottom: 0;
+}
+.section_home > a > h1{
+  font-size: 1.5rem;
+  font-weight: 300;
+  text-align: center;
+}
+.section_admin{
+  width: 100%;
+}
+.section_admin{
+  border-right: 2px solid black;
+  border-left: 2px solid black;
+  border-bottom: 0;
 }
