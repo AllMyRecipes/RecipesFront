@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Category } from 'src/app/models/Category';
 import { CategoriesService } from 'src/app/services/CategoriesService/categories.service';
-import { MessageService, SelectItem } from 'primeng/api';
+
 @Component({
   selector: 'app-admin.category',
   templateUrl: './admin.category.component.html',
@@ -9,6 +9,8 @@ import { MessageService, SelectItem } from 'primeng/api';
 })
 export class AdminCategoryComponent implements OnInit {
   categories: Category[]=[]
+  clonedCategory: { [s: string]: Category } = {};
+
   constructor(private categoriesService: CategoriesService ){}
   ngOnInit(): void {
     this.categoriesService.getAllCategories();
@@ -18,5 +20,22 @@ export class AdminCategoryComponent implements OnInit {
       },
       error:(error)=> console.log(error)
     })
+  }
+  onRowEditInit(category: Category){
+
+    if(category.id){
+      this.clonedCategory[category.id] = { ...category };
+       console.log(this.clonedCategory)
+    }
+
+  }
+  onRowEditSave(category: Category){
+    console.log(category)
+
+  }
+  onRowEditCancel(category:Category, index:number){
+    console.log(index)
+    if(category.id)
+    this.categoriesService.deleteCategory(category.id)
   }
 }

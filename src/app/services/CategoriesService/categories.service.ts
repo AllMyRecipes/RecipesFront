@@ -28,7 +28,7 @@ export class CategoriesService {
   }
   deleteCategory(id : number){
     this.catApi.deleteCategory(id).subscribe({
-      next:(data)=> console.log(data,"delete"),
+      next:()=> this.getAllCategories(),
       error:(e)=> console.log(e)
     })
     this.getAllCategories();
