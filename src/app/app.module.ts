@@ -3,12 +3,16 @@ import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 /*PrimeNG Modules*/
 import { TagModule } from 'primeng/tag';
 import { MenubarModule } from 'primeng/menubar';
 import { InputTextModule } from 'primeng/inputtext';
 import { TableModule } from 'primeng/table';
+import { DialogModule } from 'primeng/dialog';
+import { ButtonModule } from 'primeng/button';
+
 
 import { AppComponent } from './app.component';
 import { MainComponent } from './components/main/main.component';
@@ -35,7 +39,10 @@ import { NavbarComponent } from './components/navbar/navbar.component';
     MenubarModule,
     TagModule,
     InputTextModule,
-    TableModule
+    TableModule,
+    DialogModule,
+    ButtonModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

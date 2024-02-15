@@ -10,6 +10,8 @@ import { CategoriesService } from 'src/app/services/CategoriesService/categories
 export class AdminCategoryComponent implements OnInit {
   categories: Category[]=[]
   clonedCategory: { [s: string]: Category } = {};
+  visible: boolean = false;
+  newCat!: string;
 
   constructor(private categoriesService: CategoriesService ){}
   ngOnInit(): void {
@@ -37,5 +39,14 @@ export class AdminCategoryComponent implements OnInit {
     console.log(index)
     if(category.id)
     this.categoriesService.deleteCategory(category.id)
+  }
+
+  showModal(){
+    this.visible = true;
+  }
+  postNewCat(){
+    const category = new Category(this.newCat);
+    this.categoriesService.newCategory(category)
+    console.log(this.newCat)
   }
 }
