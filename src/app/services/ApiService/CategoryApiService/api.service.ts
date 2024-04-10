@@ -20,4 +20,7 @@ export class CategoriesServiceApiService {
   deleteCategory(id:number){
     return this.http.delete(environment.host+"/api/category?id="+id)
   }
+  updateCategory(categoryUpdated:Category){
+    return this.http.put(environment.host+"/api/categories",categoryUpdated)
+  }
 }

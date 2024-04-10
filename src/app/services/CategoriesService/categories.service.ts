@@ -33,4 +33,10 @@ export class CategoriesService {
     })
     this.getAllCategories();
   }
+  updateCategory(categoryUpdated: Category){
+    this.catApi.updateCategory(categoryUpdated).subscribe({
+      next:()=> this.getAllCategories(),
+      error:(e)=>console.log(e)
+    })
+  }
 }

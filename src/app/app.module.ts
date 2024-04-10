@@ -20,6 +20,8 @@ import { TagsComponent } from './components/tags/tags.component';
 import { CardsComponent } from './components/cards/cards.component';
 import { AdminCategoryComponent } from './components/admin.category/admin.category.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { AdminRecipesComponent } from './components/admin.recipes/admin.recipes.component';
+import { AdminIngredientComponent } from './components/admin.ingredient/admin.ingredient.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +30,9 @@ import { NavbarComponent } from './components/navbar/navbar.component';
     TagsComponent,
     CardsComponent,
     AdminCategoryComponent,
-    NavbarComponent
+    NavbarComponent,
+    AdminRecipesComponent,
+    AdminIngredientComponent
   ],
   imports: [
     BrowserModule,

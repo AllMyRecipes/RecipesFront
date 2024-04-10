@@ -32,7 +32,7 @@ export class AdminCategoryComponent implements OnInit {
 
   }
   onRowEditSave(category: Category){
-    console.log(category)
+    this.categoriesService.updateCategory(category)
 
   }
   onRowEditCancel(category:Category, index:number){
