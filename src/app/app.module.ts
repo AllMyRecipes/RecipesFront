@@ -12,6 +12,8 @@ import { InputTextModule } from 'primeng/inputtext';
 import { TableModule } from 'primeng/table';
 import { DialogModule } from 'primeng/dialog';
 import { ButtonModule } from 'primeng/button';
+import { CardModule } from 'primeng/card';
+import { ChipModule } from 'primeng/chip';
 
 
 import { AppComponent } from './app.component';
@@ -46,7 +48,9 @@ import { AdminIngredientComponent } from './components/admin.ingredient/admin.in
     TableModule,
     DialogModule,
     ButtonModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    CardModule,
+    ChipModule
   ],
   providers: [],
   bootstrap: [AppComponent]

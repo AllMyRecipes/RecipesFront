@@ -1,1 +1,3 @@
-<p-tag *ngIf="category" value={{category.name}} [rounded]="true" severity="success">{{category.id}}</p-tag>
+<div class="card flex align-items-center gap-2 flex-wrap">
+    <p-chip label="{{category.name}}" [removable]="true"></p-chip>
+</div>

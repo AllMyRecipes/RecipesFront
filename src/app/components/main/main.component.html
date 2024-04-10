@@ -1,5 +1,9 @@
 <div class="main">
+<div class="category__tag__list" *ngFor="let item of categoryList">
+  <app-tags [category]="item" />
+</div>
   <h1>Main</h1>
+  <app-cards></app-cards>
 </div>
 
 
