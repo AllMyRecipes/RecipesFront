@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Category } from 'src/app/models/Category';
+import { CategoriesService } from 'src/app/services/CategoriesService/categories.service';
 
 @Component({
   selector: 'app-tags',
@@ -8,10 +9,13 @@ import { Category } from 'src/app/models/Category';
 })
 export class TagsComponent implements OnInit {
 @Input()category!: Category
-constructor(){
+
+constructor(private categoriesService: CategoriesService){
 }
 ngOnInit(): void {
 
 }
-
+deleteCategory(id: number){
+  this.categoriesService.deleteCategory(id)
+}
 }

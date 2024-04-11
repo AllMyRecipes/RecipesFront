@@ -9,6 +9,8 @@ import { CategoriesService } from 'src/app/services/CategoriesService/categories
 })
 export class MainComponent implements OnInit {
   categoryList:Category[] = [];
+  visible: boolean = false;
+  newCat!: string;
   constructor(private categoriesService: CategoriesService){}
   ngOnInit(): void {
     this.categoriesService.getAllCategories();
@@ -17,6 +19,14 @@ export class MainComponent implements OnInit {
       error: error=> console.log(error),
     },
     )
+  }
+  showDialog() {
+    this.visible = true;
+  }
+  postNewCat(){
+    const category = new Category(this.newCat);
+    this.categoriesService.newCategory(category)
+    this.visible = false;
   }
 
 }

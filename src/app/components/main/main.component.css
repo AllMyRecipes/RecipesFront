@@ -4,4 +4,10 @@
 }
 .category__tag__list{
   display: flex;
+  justify-content: space-around;
+  margin-top: 25px;
+
+}
+.categroy__tag{
+  margin-right: 2px;
 }

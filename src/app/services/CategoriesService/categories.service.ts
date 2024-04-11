@@ -29,7 +29,7 @@ export class CategoriesService {
   deleteCategory(id : number){
     this.catApi.deleteCategory(id).subscribe({
       next:()=> this.getAllCategories(),
-      error:(e)=> console.log(e)
+      error:(e)=> console.log(e, "error")
     })
     this.getAllCategories();
   }

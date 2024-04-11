@@ -14,6 +14,7 @@ import { DialogModule } from 'primeng/dialog';
 import { ButtonModule } from 'primeng/button';
 import { CardModule } from 'primeng/card';
 import { ChipModule } from 'primeng/chip';
+import { ConfirmDialogModule } from 'primeng/confirmdialog';
 
 
 import { AppComponent } from './app.component';
@@ -50,7 +51,8 @@ import { AdminIngredientComponent } from './components/admin.ingredient/admin.in
     ButtonModule,
     BrowserAnimationsModule,
     CardModule,
-    ChipModule
+    ChipModule,
+    ConfirmDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]

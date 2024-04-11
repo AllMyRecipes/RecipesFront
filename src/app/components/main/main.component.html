@@ -1,6 +1,23 @@
 <div class="main">
-<div class="category__tag__list" *ngFor="let item of categoryList">
-  <app-tags [category]="item" />
+<div class="category__tag__list" >
+  <ng-container *ngFor="let item of categoryList" >
+    <app-tags [category]="item" class="categroy__tag"/>
+  </ng-container>
+
+  <div class="card flex justify-content-center">
+  <p-button (click)="showDialog()" icon="pi pi-plus" label="Nouvelle Catégorie"></p-button>
+  <p-dialog header="Header" [(visible)]="visible" [modal]="true" [style]="{ width: '50rem' }" [breakpoints]="{ '1199px': '75vw', '575px': '90vw' }">
+      <div class="card flex justify-content-center">
+        <form class="flex flex-column gap-2" (ngSubmit)="postNewCat()">
+          <label for="category-name">Nom de la nouvelle catégorie</label>
+          <input name="category-name" type="text" pInputText [(ngModel)]="newCat" />
+          <button icon="pi pi-check">Valider</button>
+        </form>
+      </div>
+
+  </p-dialog>
+  </div>
+
 </div>
   <h1>Main</h1>
   <app-cards></app-cards>

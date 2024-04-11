@@ -18,7 +18,7 @@ export class CategoriesServiceApiService {
     return this.http.post<Category>(environment.host+"/api/category", newCategory)
   }
   deleteCategory(id:number){
-    return this.http.delete(environment.host+"/api/category?id="+id)
+    return this.http.delete(environment.host+"/api/category?id="+id, { responseType: 'text' })
   }
   updateCategory(categoryUpdated:Category){
     return this.http.put(environment.host+"/api/categories",categoryUpdated)

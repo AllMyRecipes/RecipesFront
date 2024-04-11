@@ -1,3 +1,3 @@
-<div class="card flex align-items-center gap-2 flex-wrap">
-    <p-chip label="{{category.name}}" [removable]="true"></p-chip>
+<div class="card flex align-items-center gap-2 flex-wrap ">
+    <p-chip label="{{category.name}}" [removable]="true" *ngIf="category.id" (onRemove)="deleteCategory(category.id)"></p-chip>
 </div>
