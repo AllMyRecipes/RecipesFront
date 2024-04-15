@@ -1,6 +1,6 @@
 import { TestBed } from '@angular/core/testing';
 
-import { CategoriesServiceApiService } from './api.service';
+import { CategoriesServiceApiService } from './api.category.service';
 
 describe('ApiService', () => {
   let service: CategoriesServiceApiService;

@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { CategoriesServiceApiService } from '../ApiService/CategoryApiService/api.service';
+import { CategoriesServiceApiService } from '../ApiService/CategoryApiService/api.category.service';
 import { Category } from 'src/app/models/Category';
 import { BehaviorSubject, Observable } from 'rxjs';
 
