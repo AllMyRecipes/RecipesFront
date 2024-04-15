@@ -11,3 +11,12 @@
 .categroy__tag{
   margin-right: 2px;
 }
+.form-category{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.validate__button{
+  width: 10%;
+  margin: auto;
+}

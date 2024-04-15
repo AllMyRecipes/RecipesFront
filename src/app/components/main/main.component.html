@@ -6,12 +6,20 @@
 
   <div class="card flex justify-content-center">
   <p-button (click)="showDialog()" icon="pi pi-plus" label="Nouvelle Catégorie"></p-button>
-  <p-dialog header="Header" [(visible)]="visible" [modal]="true" [style]="{ width: '50rem' }" [breakpoints]="{ '1199px': '75vw', '575px': '90vw' }">
+  <p-dialog header="Nouvelle categorie" [(visible)]="visible" [modal]="true" [style]="{ width: '50rem', height : '25rem' }" >
       <div class="card flex justify-content-center">
-        <form class="flex flex-column gap-2" (ngSubmit)="postNewCat()">
-          <label for="category-name">Nom de la nouvelle catégorie</label>
-          <input name="category-name" type="text" pInputText [(ngModel)]="newCat" />
-          <button icon="pi pi-check">Valider</button>
+        <form class="form-category" (ngSubmit)="postNewCat()">
+          <ng-container>
+            <label for="category-name">Nom de la nouvelle catégorie</label>
+            <input name="category-name" type="text" pInputText [(ngModel)]="newCat" required="true"/>
+          </ng-container>
+
+          <ng-container>
+            <label for="category-color">Couleur de la categorie</label>
+            <p-colorPicker name="category-color" type="color" [(ngModel)]="color" />
+          </ng-container>
+
+          <button class="validate__button" icon="pi pi-check">Valider</button>
         </form>
       </div>
 

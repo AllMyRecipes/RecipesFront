@@ -11,6 +11,7 @@ export class MainComponent implements OnInit {
   categoryList:Category[] = [];
   visible: boolean = false;
   newCat!: string;
+  color!: string;
   constructor(private categoriesService: CategoriesService){}
   ngOnInit(): void {
     this.categoriesService.getAllCategories();
@@ -23,7 +24,11 @@ export class MainComponent implements OnInit {
   showDialog() {
     this.visible = true;
   }
+  chooseColor(event : Event){
+    this.color = (event.target as HTMLInputElement).value;
+  }
   postNewCat(){
+    console.log(this.color)
     const category = new Category(this.newCat);
     this.categoriesService.newCategory(category)
     this.visible = false;
