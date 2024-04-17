@@ -23,7 +23,6 @@ import { MainComponent } from './components/main/main.component';
 import { TagsComponent } from './components/tags/tags.component';
 import { CardsComponent } from './components/cards/cards.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
-import { AdminRecipesComponent } from './components/admin.recipes/admin.recipes.component';
 import { AdminIngredientComponent } from './components/admin.ingredient/admin.ingredient.component';
 
 @NgModule({
@@ -33,7 +32,6 @@ import { AdminIngredientComponent } from './components/admin.ingredient/admin.in
     TagsComponent,
     CardsComponent,
     NavbarComponent,
-    AdminRecipesComponent,
     AdminIngredientComponent
   ],
   imports: [

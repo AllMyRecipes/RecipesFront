@@ -1,0 +1,10 @@
+.card{
+  width: 70%;
+  margin: auto;
+  margin-top: 20px;
+}
+.delete:hover{
+  background-color: #d92929;
+  color: #fff;
+  transition: 0.7s;
+}
