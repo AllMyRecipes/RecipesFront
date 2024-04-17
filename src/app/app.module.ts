@@ -22,7 +22,6 @@ import { AppComponent } from './app.component';
 import { MainComponent } from './components/main/main.component';
 import { TagsComponent } from './components/tags/tags.component';
 import { CardsComponent } from './components/cards/cards.component';
-import { AdminCategoryComponent } from './components/admin.category/admin.category.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { AdminRecipesComponent } from './components/admin.recipes/admin.recipes.component';
 import { AdminIngredientComponent } from './components/admin.ingredient/admin.ingredient.component';
@@ -33,7 +32,6 @@ import { AdminIngredientComponent } from './components/admin.ingredient/admin.in
     MainComponent,
     TagsComponent,
     CardsComponent,
-    AdminCategoryComponent,
     NavbarComponent,
     AdminRecipesComponent,
     AdminIngredientComponent

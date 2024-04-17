@@ -29,7 +29,7 @@ export class MainComponent implements OnInit {
   }
   postNewCat(){
     console.log(this.color)
-    const category = new Category(this.newCat);
+    const category = new Category(this.newCat, this.color);
     this.categoriesService.newCategory(category)
     this.visible = false;
   }
